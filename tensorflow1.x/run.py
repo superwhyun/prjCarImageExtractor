@@ -41,7 +41,7 @@ for detection in cvOut[0,0,:,:]:
         cv.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), (23, 230, 210), thickness=2)
 
 
-        all_objects.append([classID, ])
+        # all_objects.append([classID, ])
 
 
 
