@@ -10,6 +10,7 @@ def detect_car_person(img_name):
     bbox, label, conf = cv.detect_common_objects(im)
 
     if(label.count('car') > 0 and label.count('person') ==0 ):
+        print('this image has ', label.count('car'), ' cars')
         return img_name
     else:
         return None
@@ -22,7 +23,7 @@ if __name__ == '__main__':
 
     print('scanning....')
 
-    for (path, dir, files) in os.walk("./photos"):
+    for (path, dir, files) in os.walk("./inputs"):
         print('gogogo')
         for filename in files:
             ext = os.path.splitext(filename)[-1]
@@ -30,5 +31,8 @@ if __name__ == '__main__':
                 car_filtered = detect_car_person(path+'/'+filename)
                 if(car_filtered is not None):
                     print(car_filtered)
+                else:
+                    print('no fucking car')
+                
     
     print('completed')

@@ -1,7 +1,9 @@
 
 
-## Requirements
-- Tensorflow 1.x (tested in 1.18)
+## Overview
+
+This uses opencv and tensorflow for object detection.
+
 
 ## Steps
 1. download pretrained model
