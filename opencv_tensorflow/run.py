@@ -1,11 +1,12 @@
-import cv2 as cv
+#import cv2 as cv
+from cv2 import cv2 as cv
 import os
 import argparse 
-import itertools
+import itertools as itt
 
 def accumulate(I):
-    it = itertools.groupby(I, operator.itemgetter(0))
-    for key, subiter in it:
+    _it = itt.itertools.groupby(I, itt.operator.itemgetter(0))
+    for key, subiter in _it:
         yield key, sum(item[1] for item in subiter)
 
 
