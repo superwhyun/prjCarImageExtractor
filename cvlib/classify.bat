@@ -1,0 +1,1 @@
+python object_detect.py -i "C:\Users\USER\Dropbox\Camera Uploads" -o ./outputs -t car -m 1 -e person
